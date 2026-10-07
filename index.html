@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<lang="en">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -64,6 +64,15 @@
             margin-top: 4px;
         }
 
+        .section-header {
+            font-size: 14px;
+            font-weight: 800;
+            color: var(--text-sub);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-top: 8px;
+        }
+
         .card {
             background: var(--card-bg);
             border-radius: 16px;
@@ -76,7 +85,7 @@
             display: flex;
             align-items: center;
             gap: 12px;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
             padding-bottom: 12px;
             border-bottom: 1px solid var(--border);
         }
@@ -127,12 +136,6 @@
             border: 1px solid var(--border);
             text-decoration: none;
             color: inherit;
-            transition: all 0.2s ease;
-        }
-
-        .info-item:active {
-            background: #e2e8f0;
-            transform: scale(0.99);
         }
 
         .info-left {
@@ -167,9 +170,6 @@
             font-size: 13px;
             font-weight: 600;
             color: var(--text-main);
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
         }
 
         .action-badge {
@@ -184,8 +184,8 @@
 
         .flight-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 8px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 6px;
             margin-top: 10px;
             padding: 10px;
             background: var(--flight-bg);
@@ -201,14 +201,14 @@
         }
 
         .flight-stat .label {
-            font-size: 10px;
+            font-size: 9px;
             font-weight: 700;
             color: var(--flight-text);
             text-transform: uppercase;
         }
 
         .flight-stat .val {
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 800;
             color: var(--text-main);
         }
@@ -231,10 +231,6 @@
             cursor: pointer;
             box-shadow: 0 4px 12px rgba(29, 78, 216, 0.25);
             margin-top: 10px;
-        }
-
-        .btn-vcard:active {
-            background: var(--primary-hover);
         }
 
         .car-plate {
@@ -261,235 +257,111 @@
             <p class="page-subtitle">Golden Triangle Trip Contacts & Flight Details</p>
         </div>
 
-        <!-- Boarding Pass Card -->
+        <div class="section-header">✈️ Boarding Passes (IndiGo 6E 613 • MAA➔DEL)</div>
+
+        <!-- Passenger 1 -->
         <div class="card">
             <div class="card-header">
                 <div class="card-icon">✈️</div>
                 <div class="card-title-group">
-                    <span class="card-title">IndiGo Flight 6E 613</span>
+                    <span class="card-title">Agnieszka Teresa Piwowarczyk</span>
                     <span class="card-tag">Chennai (MAA) ➔ Delhi (DEL) • 09 Oct 2026</span>
                 </div>
             </div>
-
             <div class="flight-grid">
                 <div class="flight-stat">
                     <span class="label">PNR</span>
                     <span class="val">ZDQIST</span>
                 </div>
                 <div class="flight-stat">
-                    <span class="label">Departure</span>
-                    <span class="val">19:00</span>
+                    <span class="label">Seat</span>
+                    <span class="val">4E</span>
+                </div>
+                <div class="flight-stat">
+                    <span class="label">Zone / Seq</span>
+                    <span class="val">3 / 015</span>
                 </div>
                 <div class="flight-stat">
                     <span class="label">Boarding</span>
-                    <span class="val">18:15 (T1)</span>
-                </div>
-            </div>
-
-            <div class="info-list" style="margin-top: 12px;">
-                <div class="info-item">
-                    <div class="info-left">
-                        <span class="info-icon">👤</span>
-                        <div class="info-details">
-                            <span class="info-label">Agnieszka Teresa Piwowarczyk</span>
-                            <span class="info-value">Seat: 4E • Zone 3 • Seq 015</span>
-                        </div>
-                    </div>
-                    <span class="action-badge">UpFront</span>
-                </div>
-
-                <div class="info-item">
-                    <div class="info-left">
-                        <span class="info-icon">👤</span>
-                        <div class="info-details">
-                            <span class="info-label">Barbara Katarzyna Szaroletapatyk</span>
-                            <span class="info-value">Seat: 4A • Zone 3 • Seq 016</span>
-                        </div>
-                    </div>
-                    <span class="action-badge">UpFront</span>
-                </div>
-
-                <div class="info-item">
-                    <div class="info-left">
-                        <span class="info-icon">👤</span>
-                        <div class="info-details">
-                            <span class="info-label">Agata Dominika Cieplinska</span>
-                            <span class="info-value">Seat: 4B • Zone 3 • Seq 017</span>
-                        </div>
-                    </div>
-                    <span class="action-badge">UpFront</span>
+                    <span class="val">18:15 T1</span>
                 </div>
             </div>
         </div>
 
-        <!-- 1. Poland Embassy Card -->
+        <!-- Passenger 2 -->
         <div class="card">
             <div class="card-header">
-                <div class="card-icon">🏛️</div>
+                <div class="card-icon">✈️</div>
                 <div class="card-title-group">
-                    <span class="card-title">Poland Embassy</span>
-                    <span class="card-tag">New Delhi</span>
+                    <span class="card-title">Barbara Katarzyna Szaroletapatyk</span>
+                    <span class="card-tag">Chennai (MAA) ➔ Delhi (DEL) • 09 Oct 2026</span>
                 </div>
             </div>
-            <div class="info-list">
-                <a href="tel:+911141496900" class="info-item">
-                    <div class="info-left">
-                        <span class="info-icon">📞</span>
-                        <div class="info-details">
-                            <span class="info-label">Phone</span>
-                            <span class="info-value">+91 11 4149 6900</span>
-                        </div>
-                    </div>
-                    <span class="action-badge">Call</span>
-                </a>
-
-                <a href="mailto:newdelhi.polemb.info@msz.gov.pl" class="info-item">
-                    <div class="info-left">
-                        <span class="info-icon">✉️</span>
-                        <div class="info-details">
-                            <span class="info-label">General Email</span>
-                            <span class="info-value">newdelhi.polemb.info@msz.gov.pl</span>
-                        </div>
-                    </div>
-                    <span class="action-badge">Email</span>
-                </a>
-
-                <a href="mailto:newdelhi.consul@msz.gov.pl" class="info-item">
-                    <div class="info-left">
-                        <span class="info-icon">🏛️</span>
-                        <div class="info-details">
-                            <span class="info-label">Consular Email</span>
-                            <span class="info-value">newdelhi.consul@msz.gov.pl</span>
-                        </div>
-                    </div>
-                    <span class="action-badge">Email</span>
-                </a>
+            <div class="flight-grid">
+                <div class="flight-stat">
+                    <span class="label">PNR</span>
+                    <span class="val">ZDQIST</span>
+                </div>
+                <div class="flight-stat">
+                    <span class="label">Seat</span>
+                    <span class="val">4A</span>
+                </div>
+                <div class="flight-stat">
+                    <span class="label">Zone / Seq</span>
+                    <span class="val">3 / 016</span>
+                </div>
+                <div class="flight-stat">
+                    <span class="label">Boarding</span>
+                    <span class="val">18:15 T1</span>
+                </div>
             </div>
         </div>
 
-        <!-- 2. Agra Tour Guide Card -->
+        <!-- Passenger 3 -->
         <div class="card">
             <div class="card-header">
-                <div class="card-icon">🕌</div>
+                <div class="card-icon">✈️</div>
                 <div class="card-title-group">
-                    <span class="card-title">Upmeet Singh</span>
-                    <span class="card-tag">Guide in Agra</span>
+                    <span class="card-title">Agata Dominika Cieplinska</span>
+                    <span class="card-tag">Chennai (MAA) ➔ Delhi (DEL) • 09 Oct 2026</span>
                 </div>
             </div>
-            <div class="info-list">
-                <a href="tel:+919639323937" class="info-item">
-                    <div class="info-left">
-                        <span class="info-icon">📞</span>
-                        <div class="info-details">
-                            <span class="info-label">Phone</span>
-                            <span class="info-value">+91 96393 23937</span>
-                        </div>
-                    </div>
-                    <span class="action-badge">Call</span>
-                </a>
+            <div class="flight-grid">
+                <div class="flight-stat">
+                    <span class="label">PNR</span>
+                    <span class="val">ZDQIST</span>
+                </div>
+                <div class="flight-stat">
+                    <span class="label">Seat</span>
+                    <span class="val">4B</span>
+                </div>
+                <div class="flight-stat">
+                    <span class="label">Zone / Seq</span>
+                    <span class="val">3 / 017</span>
+                </div>
+                <div class="flight-stat">
+                    <span class="label">Boarding</span>
+                    <span class="val">18:15 T1</span>
+                </div>
             </div>
         </div>
 
-        <!-- 3. Cab Driver Card -->
+        <!-- Passenger 4 -->
         <div class="card">
             <div class="card-header">
-                <div class="card-icon">🚕</div>
+                <div class="card-icon">✈️</div>
                 <div class="card-title-group">
-                    <span class="card-title">Arvind Kumar</span>
-                    <span class="card-tag">Cab Driver</span>
+                    <span class="card-title">Ms. Lalitha Vishwanath</span>
+                    <span class="card-tag">Chennai (MAA) ➔ Delhi (DEL) • 09 Oct 2026</span>
                 </div>
             </div>
-            <div class="info-list">
-                <a href="tel:+919927733659" class="info-item">
-                    <div class="info-left">
-                        <span class="info-icon">📞</span>
-                        <div class="info-details">
-                            <span class="info-label">Phone</span>
-                            <span class="info-value">+91 99277 33659</span>
-                        </div>
-                    </div>
-                    <span class="action-badge">Call</span>
-                </a>
-                <div class="info-item">
-                    <div class="info-left">
-                        <span class="info-icon">🚘</span>
-                        <div class="info-details">
-                            <span class="info-label">Car Number Plate</span>
-                            <div><span class="car-plate">DL1VC 6434</span></div>
-                        </div>
-                    </div>
+            <div class="flight-grid">
+                <div class="flight-stat">
+                    <span class="label">PNR</span>
+                    <span class="val">NF5K4K</span>
                 </div>
-            </div>
-        </div>
-
-        <!-- 4. Shopping Guide Card -->
-        <div class="card">
-            <div class="card-header">
-                <div class="card-icon">🛍️</div>
-                <div class="card-title-group">
-                    <span class="card-title">Priya Nara Cousin</span>
-                    <span class="card-tag">Nara Cousin • Lajpat Market Shopping</span>
+                <div class="flight-stat">
+                    <span class="label">Seat</span>
+                    <span class="val">35B</span>
                 </div>
-            </div>
-            <div class="info-list">
-                <a href="tel:+918800523290" class="info-item">
-                    <div class="info-left">
-                        <span class="info-icon">📞</span>
-                        <div class="info-details">
-                            <span class="info-label">Phone</span>
-                            <span class="info-value">+91 88005 23290</span>
-                        </div>
-                    </div>
-                    <span class="action-badge">Call</span>
-                </a>
-            </div>
-        </div>
-
-        <button class="btn-vcard" onclick="downloadAllVCards()">
-            <span>💾 Save All Contacts (.vcf)</span>
-        </button>
-
-    </div>
-
-    <script>
-        function downloadAllVCards() {
-            const vcardData = 
-`BEGIN:VCARD
-VERSION:3.0
-FN:Polish Embassy New Delhi
-TEL;TYPE=WORK,VOICE:+911141496900
-EMAIL;TYPE=WORK:newdelhi.polemb.info@msz.gov.pl
-EMAIL;TYPE=WORK,OTHER:newdelhi.consul@msz.gov.pl
-END:VCARD
-BEGIN:VCARD
-VERSION:3.0
-FN:Upmeet Singh (Agra Guide)
-TEL;TYPE=CELL:+919639323937
-NOTE:Guide in Agra
-END:VCARD
-BEGIN:VCARD
-VERSION:3.0
-FN:Arvind Kumar (Cab Driver)
-TEL;TYPE=CELL:+919927733659
-NOTE:Car Plate: DL1VC 6434
-END:VCARD
-BEGIN:VCARD
-VERSION:3.0
-FN:Priya Nara Cousin (Shopping Help)
-TEL;TYPE=CELL:+918800523290
-NOTE:Shopping helper for Lajpat Market
-END:VCARD`;
-
-            const blob = new Blob([vcardData], { type: 'text/vcard;charset=utf-8;' });
-            const url = URL.createObjectURL(blob);
-            const link = document.createElement('a');
-            link.href = url;
-            link.setAttribute('download', 'Trip_Contacts.vcf');
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        }
-    </script>
-
-</body>
-</html>
+                <div class="flight-stat">
