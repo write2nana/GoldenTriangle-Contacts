@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Important Trip Contacts & Directory</title>
+    <title>Trip Contacts & Boarding Passes</title>
     <style>
         :root {
             --bg: #f3f4f6;
@@ -16,6 +16,9 @@
             --border: #e5e7eb;
             --badge-bg: #eff6ff;
             --badge-text: #1d4ed8;
+            --flight-bg: #eef2ff;
+            --flight-border: #c7d2fe;
+            --flight-text: #3730a3;
         }
 
         * {
@@ -179,6 +182,37 @@
             flex-shrink: 0;
         }
 
+        .flight-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin-top: 10px;
+            padding: 10px;
+            background: var(--flight-bg);
+            border: 1px solid var(--flight-border);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .flight-stat {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .flight-stat .label {
+            font-size: 10px;
+            font-weight: 700;
+            color: var(--flight-text);
+            text-transform: uppercase;
+        }
+
+        .flight-stat .val {
+            font-size: 14px;
+            font-weight: 800;
+            color: var(--text-main);
+        }
+
         .btn-vcard {
             display: flex;
             align-items: center;
@@ -223,8 +257,69 @@
     <div class="container">
         
         <div class="page-header">
-            <h1 class="page-title">Trip Directory</h1>
-            <p class="page-subtitle">Golden Triangle Trip Contacts</p>
+            <h1 class="page-title">Trip Directory & Boarding Passes</h1>
+            <p class="page-subtitle">Golden Triangle Trip Contacts & Flight Details</p>
+        </div>
+
+        <!-- Boarding Pass Card -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon">✈️</div>
+                <div class="card-title-group">
+                    <span class="card-title">IndiGo Flight 6E 613</span>
+                    <span class="card-tag">Chennai (MAA) ➔ Delhi (DEL) • 09 Oct 2026</span>
+                </div>
+            </div>
+
+            <div class="flight-grid">
+                <div class="flight-stat">
+                    <span class="label">PNR</span>
+                    <span class="val">ZDQIST</span>
+                </div>
+                <div class="flight-stat">
+                    <span class="label">Departure</span>
+                    <span class="val">19:00</span>
+                </div>
+                <div class="flight-stat">
+                    <span class="label">Boarding</span>
+                    <span class="val">18:15 (T1)</span>
+                </div>
+            </div>
+
+            <div class="info-list" style="margin-top: 12px;">
+                <div class="info-item">
+                    <div class="info-left">
+                        <span class="info-icon">👤</span>
+                        <div class="info-details">
+                            <span class="info-label">Agnieszka Teresa Piwowarczyk</span>
+                            <span class="info-value">Seat: 4E • Zone 3 • Seq 015</span>
+                        </div>
+                    </div>
+                    <span class="action-badge">UpFront</span>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-left">
+                        <span class="info-icon">👤</span>
+                        <div class="info-details">
+                            <span class="info-label">Barbara Katarzyna Szaroletapatyk</span>
+                            <span class="info-value">Seat: 4A • Zone 3 • Seq 016</span>
+                        </div>
+                    </div>
+                    <span class="action-badge">UpFront</span>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-left">
+                        <span class="info-icon">👤</span>
+                        <div class="info-details">
+                            <span class="info-label">Agata Dominika Cieplinska</span>
+                            <span class="info-value">Seat: 4B • Zone 3 • Seq 017</span>
+                        </div>
+                    </div>
+                    <span class="action-badge">UpFront</span>
+                </div>
+            </div>
         </div>
 
         <!-- 1. Poland Embassy Card -->
